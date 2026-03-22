@@ -56,14 +56,14 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-[100dvh] w-full flex items-center justify-center overflow-hidden bg-[#1E1B4B] flex-col">
-      {/* Background Image with Overlay */}
+    <section className="relative min-h-[100dvh] w-full flex flex-col sm:justify-center overflow-hidden bg-[#1E1B4B]">
+      {/* Background Image / Top Image on Mobile */}
       <div 
         ref={bgRef}
-        className="absolute inset-0 bg-cover bg-center z-0"
+        className="relative sm:absolute w-full h-[35vh] sm:h-full sm:inset-0 bg-cover bg-center z-0 shrink-0"
         style={{ backgroundImage: `url(${schoolHeroImg})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-[#1E1B4B]/80 via-transparent to-[#1E1B4B]/95" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1E1B4B]/30 via-[#1E1B4B]/60 to-[#1E1B4B] sm:from-[#1E1B4B]/80 sm:via-transparent sm:to-[#1E1B4B]/95" />
       </div>
 
       {/* Floating 3D Elements */}
@@ -81,25 +81,25 @@ const Hero = () => {
       </div>
 
       {/* Hero Content */}
-      <div ref={contentRef} className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 text-center text-white pb-20 md:pb-0" style={{ pointerEvents: 'none' }}>
-        <div className="inline-block px-4 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20 mb-6 md:mb-8 pointer-events-auto">
+      <div ref={contentRef} className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 text-center text-white flex-grow flex flex-col items-center justify-center pt-2 pb-16 sm:pt-0 sm:pb-0" style={{ pointerEvents: 'none' }}>
+        <div className="inline-block px-4 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20 mb-4 sm:mb-6 md:mb-8 pointer-events-auto">
           <span className="text-[10px] sm:text-xs md:text-base font-rounded font-black tracking-widest uppercase">
             ✨ Admission Open 2026-27
           </span>
         </div>
 
-        <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-playful font-black mb-4 md:mb-6 leading-tight drop-shadow-2xl px-1">
+        <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-playful font-black mb-3 sm:mb-4 md:mb-6 leading-tight drop-shadow-2xl px-1">
           I MASTER <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-yellow to-brand-blue drop-shadow-sm">
             PRE SCHOOL
           </span>
         </h1>
 
-        <p className="text-base sm:text-lg md:text-3xl font-rounded font-bold max-w-2xl mx-auto mb-8 md:mb-12 text-white/90 leading-relaxed drop-shadow-lg italic px-2">
+        <p className="text-base sm:text-lg md:text-3xl font-rounded font-bold max-w-2xl mx-auto mb-6 sm:mb-8 md:mb-12 text-white/90 leading-relaxed drop-shadow-lg italic px-2">
           "Where Every Child Learns, Plays, and Grows with Joy!"
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 pointer-events-auto px-2 w-full max-w-md sm:max-w-none mx-auto">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 pointer-events-auto px-2 w-full max-w-md sm:max-w-none mx-auto mt-auto sm:mt-0">
           <button className="group w-full sm:w-auto px-4 py-3 sm:px-8 md:px-10 md:py-5 bg-brand-yellow text-gray-900 rounded-2xl font-rounded font-black text-base md:text-xl transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(252,196,25,0.4)] flex items-center justify-center gap-2 md:gap-3">
             Enroll Today <ChevronRight className="group-hover:translate-x-1 transition-transform w-5 h-5 md:w-6 md:h-6" />
           </button>
