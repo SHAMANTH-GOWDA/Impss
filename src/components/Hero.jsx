@@ -56,14 +56,14 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-[100dvh] w-full flex items-center justify-center overflow-hidden bg-black flex-col">
+    <section className="relative min-h-[100dvh] w-full flex items-center justify-center overflow-hidden bg-[#1E1B4B] flex-col">
       {/* Background Image with Overlay */}
       <div 
         ref={bgRef}
-        className="absolute inset-0 bg-contain bg-no-repeat bg-top sm:bg-cover sm:bg-center z-0 opacity-80"
+        className="absolute inset-0 bg-cover bg-center z-0"
         style={{ backgroundImage: `url(${schoolHeroImg})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/80 to-black/95" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1E1B4B]/80 via-transparent to-[#1E1B4B]/95" />
       </div>
 
       {/* Floating 3D Elements */}
