@@ -81,29 +81,29 @@ const Hero = () => {
       </div>
 
       {/* Hero Content */}
-      <div ref={contentRef} className="relative z-20 container mx-auto px-6 text-center text-white">
-        <div className="inline-block px-6 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20 mb-8">
-          <span className="text-sm md:text-base font-rounded font-black tracking-widest uppercase">
+      <div ref={contentRef} className="relative z-20 container mx-auto px-4 md:px-6 text-center text-white pb-16 md:pb-0" style={{ pointerEvents: 'none' }}>
+        <div className="inline-block px-4 py-2 md:px-6 md:py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20 mb-6 md:mb-8 pointer-events-auto">
+          <span className="text-xs sm:text-sm md:text-base font-rounded font-black tracking-widest uppercase">
             ✨ Admission Open 2026-27
           </span>
         </div>
 
-        <h1 className="text-5xl md:text-8xl lg:text-9xl font-playful font-black mb-6 leading-tight drop-shadow-2xl">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-playful font-black mb-4 md:mb-6 leading-[1.1] md:leading-tight drop-shadow-2xl px-2">
           I MASTER <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-yellow to-brand-blue">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-yellow to-brand-blue drop-shadow-sm">
             PRE SCHOOL
           </span>
         </h1>
 
-        <p className="text-xl md:text-3xl font-rounded font-bold max-w-3xl mx-auto mb-12 text-white/90 leading-relaxed drop-shadow-lg italic">
+        <p className="text-lg sm:text-xl md:text-3xl font-rounded font-bold max-w-3xl mx-auto mb-8 md:mb-12 text-white/90 leading-relaxed drop-shadow-lg italic px-4">
           "Where Every Child Learns, Plays, and Grows with Joy!"
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-          <button className="group px-10 py-5 bg-brand-yellow text-gray-900 rounded-2xl font-rounded font-black text-xl transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(252,196,25,0.4)] flex items-center gap-3">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6 pointer-events-auto px-4 w-full">
+          <button className="group w-full sm:w-auto px-6 py-4 md:px-10 md:py-5 bg-brand-yellow text-gray-900 rounded-2xl font-rounded font-black text-lg md:text-xl transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(252,196,25,0.4)] flex items-center justify-center gap-3">
             Enroll Today <ChevronRight className="group-hover:translate-x-2 transition-transform" />
           </button>
-          <button className="px-10 py-5 bg-white/10 backdrop-blur-md text-white border-2 border-white/40 rounded-2xl font-rounded font-black text-xl transition-all hover:bg-white/20 hover:border-white">
+          <button className="w-full sm:w-auto px-6 py-4 md:px-10 md:py-5 bg-white/10 backdrop-blur-md text-white border-2 border-white/40 rounded-2xl font-rounded font-black text-lg md:text-xl transition-all hover:bg-white/20 hover:border-white flex items-center justify-center">
             Take a Tour
           </button>
         </div>
